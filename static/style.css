@@ -1,0 +1,148 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:monospace;
+    color: white !important;
+}
+/* მთავარი გვერდი */
+.index{
+        background-color: black;
+
+}
+.index *{
+    padding: 0;
+    margin:0;
+    font-family: cursive;
+}
+/* აღწერის ტექსტი */
+
+h4{
+    margin-top: 200px !important;
+    line-height: 2;
+    font-weight: 700;
+}
+.index span{
+    font-size: 14px;
+    color: red !important;
+}
+/* შესაყვანი ადგილი */
+input{ 
+    box-shadow: 2px 2px 2px 2px rgb(59, 0, 223);
+    width: 200px;
+    color: black !important;
+    border: 0px;
+    padding: 10px !important;
+    height: 20px;
+    border-radius: 5px;
+    margin-top: 30px !important;
+    outline: none !important;
+}
+input:active{
+    border-style: none;
+    border: 0px;
+}
+
+/* ღილაკი */
+button{
+    width: 150px;
+    height: 50px;
+    margin-top: 40px !important;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+button:active{
+    transform: translateY(2px);
+    font-size: 27px;
+}
+/* მთავარი თემა */
+.center{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: #ff1e1e;;
+    position: relative;
+    /* top:100px; */
+    transform: rotate(45deg);
+    margin: auto;
+    z-index: 0;
+    
+}
+.center p{
+    vertical-align: middle;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 100px;
+    margin: auto;
+    z-index:4;
+    transform: rotate(-45deg)
+
+}
+
+
+/* პირველი დონე */
+.first,.second,.third{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    vertical-align: middle;
+    width: 600px;
+    z-index: 10;
+}
+.level_1,.level_2{
+    margin: 30px;
+    float: left;
+    width: 100px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.first span,.second span,.third span{
+    position: relative;
+    color: white;
+    width: 100px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color:#ff01d5;
+    z-index: 8;
+}
+
+
+/* მეორე დონე */
+.second, .third{
+    justify-content: space-between;
+    width: 900px;
+}
+.second span{
+    border-bottom: 7px solid #ff19e0;
+    border-left: 3px solid black ;
+    background-color: black;
+    color:white !important;
+}
+.level_2{
+    height: 200px  !important;
+}
+
+/* მესამე დონე */
+.third{
+    width: 1000px;
+}
+
+
+.level_3 span{
+    background-color:rgb(28, 221, 255);
+    border-bottom: 8px solid rgb(9, 241, 230);
+    border-left: 3px solid black ;
+    color: rgb(0, 0, 0) !important;
+    margin: 200px  0 200px 0;
+    border: none;
+}

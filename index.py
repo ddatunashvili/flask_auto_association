@@ -17,6 +17,7 @@ driver = webdriver.Chrome(executable_path="driver.exe", chrome_options=chrome_op
 
 
 app = Flask(__name__)
+
 # ტოკენი
 app.secret_key = "app" 
 
@@ -28,20 +29,19 @@ def get_words(count,topic):
         return ["<>","<>"]
     else:
         driver.get(f"https://reversedictionary.org/wordsfor/{topic}")
-        time.sleep(0.8)
-        # count-=1
+        time.sleep(1)
+        # count+=1
         try:
             items = driver.find_elements(By.CLASS_NAME, "item")
             words=[]
-            for i in range(3, len(items)): # მესამე სიტყვიდან დაიწყოს
+            for i in range(1, len(items)): # მესამე სიტყვიდანს
                 if count > 0 :
-                   count-=1 
-
-                   words.append(items[i].text)
+                   count-=1              
+                   words.append(items[i].text)                     
                 else:
                    break
         except:
-            
+            pass
             print(f"{topic} - word break")
         return words
 
@@ -79,8 +79,7 @@ def map():
     get_words(2,words_2[1][0]), 
     get_words(2,words_2[1][1])] # 6
 
-    flash(F"გავათავე")
-    return render_template("map.html", topics_1=words_1,  topics_2=words_2, topics_3=words_3)
+    return render_template( "map.html",topic=topic, topics_1=words_1,  topics_2=words_2, topics_3 = words_3)
 
 
 if __name__ == "__main__":

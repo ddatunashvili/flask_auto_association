@@ -4,30 +4,86 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ასოციაციური რუკა</title>
+	<!-- css -->
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+
 </head>
-<body style=" background: black;">
-<center>
-	<div style=" color: white; ">
-		<h1>პირველი</h1>
-		<tr > {%for  topic in  topics_1%}
-				<td><span style="margin-left: 40px;background:limegreen;">{{topic}}</span></td>
-			{%endfor%}
-		</tr>
-		<br>
-		<h2>მეორე</h2>
-		<tr > {%for  topic in  topics_2%}
-				<td><span style="margin-left: 40px;background: green;">{{topic[0]}}</span></td>
-				<td><span style="margin-left: 40px;background: green;">{{topic[1]}}</span></td>
-			{%endfor%}
-		</tr>
-		<br>
-		<h3>მესამე</h3>
-		<tr > {%for  topic in  topics_3%}
-				<td><span style="margin-left: 40px;background: red;">{{topic[0]}}</span></td>
-				<td><span style="margin-left: 40px;background: red;">{{topic[1]}}</span></td>
-			{%endfor%}
-		</tr>
+<body style="margin-top: 100px;" >	
+<!-- მესამე დონე -->
+<div class="third">
+	<div class="level_3">
+		<span >{{topics_3[0][0]}}</span>	
 	</div>
-</center>
+	<div class="level_3">
+		<span >{{topics_3[0][1]}}</span>	
+	</div>
+	<div class="level_3">
+		<span >{{topics_3[3][0]}}</span>	
+	</div>
+	<div class="level_3">
+		<span >{{topics_3[3][1]}}</span>	
+	</div>
+</div>
+</center><!-- მესამე დონე -->
+<!-- მეორე დონე -->
+<center>
+	<div class="second">
+		<div class="level_2">
+			<span >{{topics_2[0][0]}}</span>	
+		</div>
+		<div class="level_2">
+			<span >{{topics_2[0][1]}}</span>	
+		</div>
+	</div>
+</center><!-- მეორე დონე end  -->
+<!-- პირველი დონე -->
+<center>
+	<!--  -->
+	<div class="first">
+		<div class="level_1"> 
+			<span >{{topics_1[0]}}</span>		
+		</div>
+			<!-- მთავარი  თემა -->
+			<div class="center">
+				<p>{{topic}}</p>
+			</div>		
+		<div class="level_1"> 
+			<span >{{topics_1[1]}}</span>		
+		</div>
+	</div>
+</center> <!-- პირველი დონე -->
+
+<!-- მეორე დონე -->
+<center>
+<div class="second">
+	<div class="level_2">
+		<span >{{topics_2[1][0]}}</span>	
+	</div>
+	<div class="level_2">
+		<span >{{topics_2[1][1]}}</span>	
+	</div>
+	
+</div>
+</center><!-- მეორე დონე -->
+<!-- მესამე დონე -->
+<div class="third">
+	<div class="level_3">
+		<span >{{topics_3[1][0]}}</span>	
+	</div>
+	<div class="level_3">
+		<span >{{topics_3[1][1]}}</span>	
+	</div>
+	<div class="level_3">
+		<span >{{topics_3[2][0]}}</span>	
+	</div>
+	<div class="level_3">
+		<span >{{topics_3[2][1]}}</span>	
+	</div>
+</div>
+
+</center><!-- მესამე დონე -->
+<div>
+	console.log({{topics_3}})
+</div>
 </body>
 </html>

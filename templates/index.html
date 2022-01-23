@@ -4,11 +4,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ავტო ასოციატორი</title>
+	<!-- css -->
+	<link rel= "stylesheet" type= "text/css" href= "../static/style.css">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
 </head>
-<body>
+<body class="index">
 	<center>
-		<form action="#" method="post">
-			<p><input type="text" name="topic"></p>
+		<h4>ეს არისს ასოციატორი აქ ჩაწერილი სიტყვისგან დაგენერერირდება<br>ასოციაციების რუკა</h4>
+		<br> <span>! ფუნქცია მუშაობს მხოლოდ ინგლისურ ენაზე</span>
+		<br>
+		<form  action="#" method="post">
+			<input type="text" name="topic"><br>
+			<button type="submit">Go!</button>
 		</form>
 	</center>
 </body>
