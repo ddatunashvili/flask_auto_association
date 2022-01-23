@@ -16,13 +16,15 @@
 		<br>
 		<h2>მეორე</h2>
 		<tr > {%for  topic in  topics_2%}
-				<td><span style="margin-left: 40px;background: green;">{{topic}}</span></td>
+				<td><span style="margin-left: 40px;background: green;">{{topic[0]}}</span></td>
+				<td><span style="margin-left: 40px;background: green;">{{topic[1]}}</span></td>
 			{%endfor%}
 		</tr>
 		<br>
 		<h3>მესამე</h3>
 		<tr > {%for  topic in  topics_3%}
-				<td><span style="margin-left: 40px;background: red;">{{topic}}</span></td>
+				<td><span style="margin-left: 40px;background: red;">{{topic[0]}}</span></td>
+				<td><span style="margin-left: 40px;background: red;">{{topic[1]}}</span></td>
 			{%endfor%}
 		</tr>
 	</div>

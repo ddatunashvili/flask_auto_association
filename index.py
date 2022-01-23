@@ -28,18 +28,17 @@ def get_words(count,topic):
         return ["<>","<>"]
     else:
         driver.get(f"https://reversedictionary.org/wordsfor/{topic}")
-        time.sleep(0.5)
-        count-=1
+        time.sleep(0.8)
+        # count-=1
         try:
             items = driver.find_elements(By.CLASS_NAME, "item")
             words=[]
-            for i in range(1, len(items)):
-                if count > 0:
+            for i in range(3, len(items)): # მესამე სიტყვიდან დაიწყოს
+                if count > 0 :
                    count-=1 
 
                    words.append(items[i].text)
                 else:
-                   words.append("<>")
                    break
         except:
             
