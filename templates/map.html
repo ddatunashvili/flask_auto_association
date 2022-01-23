@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ასოციაციური რუკა</title>
+</head>
+<body style=" background: black;">
+<center>
+	<div style=" color: white; ">
+		<h1>პირველი</h1>
+		<tr > {%for  topic in  topics_1%}
+				<td><span style="margin-left: 40px;background:limegreen;">{{topic}}</span></td>
+			{%endfor%}
+		</tr>
+		<br>
+		<h2>მეორე</h2>
+		<tr > {%for  topic in  topics_2%}
+				<td><span style="margin-left: 40px;background: green;">{{topic}}</span></td>
+			{%endfor%}
+		</tr>
+		<br>
+		<h3>მესამე</h3>
+		<tr > {%for  topic in  topics_3%}
+				<td><span style="margin-left: 40px;background: red;">{{topic}}</span></td>
+			{%endfor%}
+		</tr>
+	</div>
+</center>
+</body>
+</html>
