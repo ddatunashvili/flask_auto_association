@@ -1,22 +1,17 @@
 
-<style>
-r { color: Red }
-o { color: yellow;background:black;padding:7px;display:flex;justify-content:center;width:300px;border-radius:7px; }
-g { color: Green }
-</style>
 
-### <g> FlaskApp
+###  FlaskApp
 
 ----
-<o> ინსტალაცია
+ ინსტალაცია
 
 - [x] აუცილებლად დარწმუნდით რომ პითონი დაყენებულიგაქვთ
 (**python v3**)
 - [x] უნდა დააყენოთ requirements.txt
-- [x] უნდა ჩაიწეროთ ქრომის ბრაუზერის შესაბამისი
+- [x] თუ არ გაეშვა მაშინ უნდა ჩაიწეროთ ქრომის ბრაუზერის შესაბამისი დრაივერი და პროექტის ფოლდერში ჩააგდოთ  სახელით driver
 chromedriver **download** :  https://chromedriver.chromium.org/
 ---
-<o>გაშვება
+გაშვება
 
 ```cmd
 cd /path-to-requirements.txt/
@@ -24,9 +19,13 @@ cd /path-to-requirements.txt/
 pip3 install -r requirements.txt  or 
 pip2 install -r requirements.txt  
 
+in linux:
+sudo pip3 install -r requirements.txt
+pip install  webdriver_manager
+
 python3 /path-to-index.py/
 python2 /path-to-index.py/
 ```
 
- <r>!დარწმუნდით რომ ქრომდრაივერი ემთხვევა თქვენი ბრაუზერის ვერსიას!
+!დარწმუნდით რომ ქრომდრაივერი ემთხვევა თქვენი ბრაუზერის ვერსიას!
 

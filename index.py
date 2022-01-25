@@ -8,33 +8,42 @@ from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
+import platform
+from webdriver_manager.chrome import ChromeDriverManager
 
-chrome_options = Options()
 
-chrome_options.add_experimental_option('excludeSwitches', ['load-extension', 'enable-automation'])
+# detect os system
+os = platform.system()
+if os=="Linux":
+    path =r"driver"
+else:
+    path =r"driver.exe"
 
-driver = webdriver.Chrome(executable_path="driver.exe", chrome_options=chrome_options)
+options = Options()
+options.headless = True
 
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
+driver.minimize_window()
 
 app = Flask(__name__)
 
 # ტოკენი
 app.secret_key = "app" 
 
-driver.set_window_position(-20000, 0)
 
 
 def get_words(count,topic):
     if topic  == "<>":
         return ["<>","<>"]
     else:
-        driver.get(f"https://reversedictionary.org/wordsfor/{topic}")
-        time.sleep(1)
+        driver.get(f"https://relatedwords.org/relatedto/{topic}")
+        time.sleep(0.2)
         # count+=1
         try:
             items = driver.find_elements(By.CLASS_NAME, "item")
             words=[]
-            for i in range(1, len(items)): # მესამე სიტყვიდანს
+            for i in range(3, len(items)): # მესამე სიტყვიდანს
                 if count > 0 :
                    count-=1              
                    words.append(items[i].text)                     
